@@ -8,8 +8,8 @@ const emailTemplateSource = fs.readFileSync(path.join(__dirname, "/tempCard.hbs"
 let transporter = {
     service: 'gmail',
     auth: {
-    user: 'anyahealthcarebot@gmail.com' ,
-    pass: 'deaq bxzg yfev pgdd',
+      user: 'promptgenerator2000@gmail.com' ,
+      pass: 'Hema@2000',
     }
 };
 
@@ -21,7 +21,7 @@ route.post('/newCardMail',(req,res)=>{
     console.log(req.body)
     const htmlToSend = template({address:req.body.address,name:req.body.patientName}) 
     const mailOptions = {
-    from:'anyahealthcarebot@gmail.com', 
+    from:'promptgenerator2000@gmail.com', 
     to:req.body.emailId,  
     subject: 'New Card Details',
     html: htmlToSend

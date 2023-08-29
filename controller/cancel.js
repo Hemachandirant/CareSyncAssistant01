@@ -9,8 +9,8 @@ const emailTemplateSource = fs.readFileSync(path.join(__dirname, "/tempCancel.hb
 let transporter = {
     service: 'gmail',
     auth: {
-    user: 'anyahealthcarebot@gmail.com' ,
-    pass: 'deaq bxzg yfev pgdd',
+    user: 'promptgenerator2000@gmail.com' ,
+    pass: 'Hema@2000',
     }
 };
 
@@ -86,7 +86,7 @@ route.post('/sendCancel',(req,res)=>{
     console.log(req.body)
     const htmlToSend = template({name:req.body.patientName}) 
     const mailOptions = {
-    from:'balajisampath777@gmail.com', 
+    from:'promptgenerator2000@gmail.com', 
     to:req.body.emailId,  
     subject: 'Your appointment is canceled',
     html: htmlToSend

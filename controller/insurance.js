@@ -12,8 +12,8 @@ const emailTemplateSource2 = fs.readFileSync(path.join(__dirname, "/tempClaim.hb
 let transporter = {
     service: 'gmail',
     auth: {
-    user: 'anyahealthcarebot@gmail.com' ,
-    pass: 'deaq bxzg yfev pgdd',
+    user: 'promptgenerator2000@gmail.com' ,
+    pass: 'Hema@2000',
     }
 };
 
@@ -51,7 +51,7 @@ route.post('/sendNewPolicyMail',(req,res)=>{
     user.create(req.body)
     const htmlToSend = template1({name:req.body.patientName}) 
     const mailOptions = {
-    from:'anyahealthcarebot@gmail.com', 
+    from:'promptgenerator2000@gmail.com', 
     to:req.body.emailId,  
     subject: 'New Policy Status',
     html: htmlToSend
@@ -101,7 +101,7 @@ route.post('/sendClaimMail',(req,res)=>{
     .then((result)=>{
       const htmlToSend = template2({name:req.body.patientName}) 
         const mailOptions = {
-            from:'anyahealthcarebot@gmail.com', 
+            from:'promptgenerator2000@gmail.com', 
             to:result.emailId,  
             subject: 'Claim Status',
             html: htmlToSend

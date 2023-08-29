@@ -9,8 +9,8 @@ const emailTemplateSource = fs.readFileSync(path.join(__dirname, "/tempOtp.hbs")
 let transporter = {
     service: 'gmail',
     auth: {
-    user: 'anyahealthcarebot@gmail.com' ,
-    pass: 'deaq bxzg yfev pgdd',
+    user: 'promptgenerator2000@gmail.com' ,
+    pass: 'Hema@123',
     }
 };
 
@@ -102,7 +102,7 @@ route.post("/sendMail",(req,res)=>{
         console.log(result.otp)
         const htmlToSend = template({name:result.patientName,otp:otp}) 
         const mailOptions = {
-        from:'anyahealthcarebot@gmail.com', 
+        from:'promptgenerator2000@gmail.com', 
         to:result.emailId,
         subject: `OTP for Patient Verification(Anya Health Care)`,
         html: htmlToSend

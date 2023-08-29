@@ -8,8 +8,8 @@ const emailTemplateSource = fs.readFileSync(path.join(__dirname, "/tempChangePol
 let transporter = {
     service: 'gmail',
     auth: {
-    user: 'anyahealthcarebot@gmail.com' ,
-    pass: 'deaq bxzg yfev pgdd',
+      user: 'promptgenerator2000@gmail.com' ,
+      pass: 'Hema@2000',
     }
 };
 
@@ -21,7 +21,7 @@ route.post('/sendChangePolicy',(req,res)=>{
     console.log(req.body)
     const htmlToSend = template({name:req.body.name}) 
     const mailOptions = {
-    from:'anyahealthcarebot@gmail.com', 
+    from:'promptgenerator2000@gmail.com', 
     to:req.body.emailId,  
     subject: 'About Policy Details',
     html: htmlToSend
